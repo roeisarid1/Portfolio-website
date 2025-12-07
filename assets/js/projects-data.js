@@ -11,15 +11,6 @@ const projects = [
   },
   {
     id: 2,
-    title: "Psychotherapy Clinic Website",
-    description:
-      "A static marketing site for a CBT psychotherapist, presenting services, approach, contact details and calls-to-action, built with semantic HTML and responsive CSS.",
-    techStack: ["HTML", "CSS"],
-    githubUrl: "https://github.com/roeisarid1/Sharon-psychotherapy",
-    liveUrl: "", // Optional: Add live demo URL when available
-  },
-  {
-    id: 3,
     title: "Meals Management Project",
     description:
       "A full-stack Meals Management platform featuring user registration, authentication, and dynamic meal operations. The frontend delivers a clean, mobile-friendly interface, while an ASP.NET Core backend provides secure REST APIs, validation logic, and session-based workflows. Designed to demonstrate real-world client–server architecture and strong JavaScript/C# integration.",
