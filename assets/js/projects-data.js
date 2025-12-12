@@ -5,7 +5,7 @@ const projects = [
     title: "Salary Calculator Web Tool",
     description:
       "A web application that allows employees to upload their hourly wage and an Excel timesheet, processes the data using Python and Pandas, and automatically calculates their gross salary. Includes interactive visualizations to track salary trends over time, with a clean and user-friendly UI built with HTML, CSS, and JavaScript.",
-    techStack: ["Python", "Pandas", "JavaScript", "HTML", "CSS"],
+    techStack: ["Python", "Pandas", "JavaScript", "HTML", "CSS", "FastAPI"],
     githubUrl: "https://github.com/roeisarid1/salary-calculator",
     liveUrl: "", // Optional: Add live demo URL when available
   },
