@@ -13,9 +13,16 @@ const projects = [
     id: 2,
     title: "Meals Management Project",
     description:
-      "A full-stack Meals Management platform featuring user registration, authentication, and dynamic meal operations. The frontend delivers a clean, mobile-friendly interface, while an ASP.NET Core backend provides secure REST APIs, validation logic, and session-based workflows. Designed to demonstrate real-world client–server architecture and strong JavaScript/C# integration.",
-    techStack: ["HTML", "CSS", "JavaScript", "ASP.NET Core", "C#"],
+      "A full-stack Meals Management platform featuring user registration, authentication, and dynamic meal operations. The frontend delivers a clean, mobile-friendly interface, while an ASP.NET Core backend provides secure REST APIs, validation logic, and session-based workflows. The system is fully integrated with a relational SQL database, including structured data models, database services (DAL), and server-side data handling, demonstrating a real-world client–server architecture and strong JavaScript/C# integration.",
+    techStack: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ASP.NET Core",
+      "C#",
+      "SQL Server",
+    ],
     githubUrl: "https://github.com/roeisarid1/MealsProject",
-    liveUrl: "", // Optional: Add live demo URL when available
+    liveUrl: "",
   },
 ];
