@@ -362,26 +362,31 @@ img {
   align-items: center;
 }
 
-.home__blob {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(
-    135deg,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  animation: morph 8s ease-in-out infinite;
+.home__profile-img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  object-position: center 22%;
+  border-radius: 50%;
   box-shadow: 0 20px 40px var(--shadow-color);
+  border: 5px solid var(--white-color);
+  transition: var(--transition);
+  animation: fadeInScale 1s ease-out;
 }
 
-@keyframes morph {
-  0%,
-  100% {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+.home__profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.3);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  50% {
-    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -744,9 +749,9 @@ img {
     order: -1;
   }
 
-  .home__blob {
-    width: 250px;
-    height: 250px;
+  .home__profile-img {
+    width: 320px;
+    height: 320px;
   }
 
   .about__container {
@@ -850,9 +855,9 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-  .home__blob {
-    width: 200px;
-    height: 200px;
+  .home__profile-img {
+    width: 260px;
+    height: 260px;
   }
 
   .home__buttons {
