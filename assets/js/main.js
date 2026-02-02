@@ -82,7 +82,7 @@ window.addEventListener("scroll", addHeaderShadow);
 // ===== SCROLL REVEAL ANIMATION =====
 function revealOnScroll() {
   const elements = document.querySelectorAll(
-    ".skills__category, .project__card, .timeline__item, .about__container"
+    ".skills__category, .timeline__item, .about__container",
   );
 
   elements.forEach((element) => {
@@ -98,7 +98,7 @@ function revealOnScroll() {
 // Add hidden class initially
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(
-    ".skills__category, .project__card, .timeline__item"
+    ".skills__category, .timeline__item",
   );
   elements.forEach((element) => {
     element.classList.add("hidden");
@@ -127,63 +127,10 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(
-    ".skills__category, .project__card, .timeline__item"
+    ".skills__category, .timeline__item",
   );
   animatedElements.forEach((el) => observer.observe(el));
 });
-
-// ===== GENERATE PROJECTS DYNAMICALLY =====
-function generateProjects() {
-  const projectsContainer = document.getElementById("projects-container");
-
-  if (!projectsContainer) return;
-
-  projectsContainer.innerHTML = "";
-
-  projects.forEach((project) => {
-    const projectCard = document.createElement("div");
-    projectCard.className = "project__card hidden";
-
-    // Create tech badges HTML
-    const techBadges = project.techStack
-      .map((tech) => `<span class="tech__badge">${tech}</span>`)
-      .join("");
-
-    // Create buttons HTML
-    let buttonsHTML = `
-            <a href="${project.githubUrl}" class="button button--secondary project__button" target="_blank" rel="noopener noreferrer">
-                View on GitHub
-            </a>
-        `;
-
-    if (project.liveUrl) {
-      buttonsHTML += `
-                <a href="${project.liveUrl}" class="button button--primary project__button" target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                </a>
-            `;
-    }
-
-    projectCard.innerHTML = `
-            <h3 class="project__title">${project.title}</h3>
-            <p class="project__description">${project.description}</p>
-            <div class="project__tech">
-                ${techBadges}
-            </div>
-            <div class="project__buttons">
-                ${buttonsHTML}
-            </div>
-        `;
-
-    projectsContainer.appendChild(projectCard);
-
-    // Observe the newly created project card
-    observer.observe(projectCard);
-  });
-}
-
-// Generate projects when DOM is loaded
-document.addEventListener("DOMContentLoaded", generateProjects);
 
 // ===== UPDATE FOOTER YEAR =====
 function updateFooterYear() {
@@ -341,9 +288,9 @@ window.addEventListener("scroll", debouncedShadow);
 // ===== CONSOLE MESSAGE =====
 console.log(
   "%c👋 Welcome to Roei Sarid's Portfolio!",
-  "color: #2563eb; font-size: 20px; font-weight: bold;"
+  "color: #2563eb; font-size: 20px; font-weight: bold;",
 );
 console.log(
   "%cInterested in the code? Check out the GitHub repository!",
-  "color: #6b7280; font-size: 14px;"
+  "color: #6b7280; font-size: 14px;",
 );

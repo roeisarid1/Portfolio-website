@@ -17,8 +17,8 @@
   --shadow-color: rgba(0, 0, 0, 0.1);
 
   /* Typography */
-  --body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+  --body-font:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --h1-font-size: 2.5rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.5rem;
@@ -488,72 +488,6 @@ img {
   transform: scale(1.05);
 }
 
-/* ===== PROJECTS SECTION ===== */
-.projects {
-  background-color: var(--white-color);
-}
-
-.projects__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.project__card {
-  background-color: var(--bg-color);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 5px 15px var(--shadow-color);
-  transition: var(--transition);
-  border: 2px solid transparent;
-}
-
-.project__card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px var(--shadow-color);
-  border-color: var(--primary-color);
-}
-
-.project__title {
-  font-size: var(--h3-font-size);
-  color: var(--text-color);
-  margin-bottom: var(--mb-1);
-}
-
-.project__description {
-  color: var(--text-color-light);
-  margin-bottom: var(--mb-1-5);
-  line-height: 1.6;
-}
-
-.project__tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: var(--mb-1-5);
-}
-
-.tech__badge {
-  padding: 0.25rem 0.75rem;
-  background-color: var(--white-color);
-  color: var(--primary-color);
-  border-radius: 0.25rem;
-  font-size: var(--smaller-font-size);
-  font-weight: var(--font-medium);
-  border: 1px solid var(--primary-color);
-}
-
-.project__buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.project__button {
-  padding: 0.5rem 1.25rem;
-  font-size: var(--small-font-size);
-}
-
 /* ===== EXPERIENCE SECTION ===== */
 .timeline {
   position: relative;
@@ -725,7 +659,9 @@ img {
 .hidden {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
 }
 
 .show {
@@ -842,10 +778,6 @@ img {
   }
 
   .skills__container {
-    grid-template-columns: 1fr;
-  }
-
-  .projects__container {
     grid-template-columns: 1fr;
   }
 
