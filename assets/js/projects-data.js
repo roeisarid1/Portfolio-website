@@ -2,27 +2,100 @@
 const projects = [
   {
     id: 1,
-    title: "Salary Calculator Web Tool",
+    title: "Teamgel",
+    subtitle: "Event Workforce Management Platform (SaaS Concept)",
     description:
-      "A web application that allows employees to upload their hourly wage and an Excel timesheet, processes the data using Python and Pandas, and automatically calculates their gross salary. Includes interactive visualizations to track salary trends over time, with a clean and user-friendly UI built with HTML, CSS, and JavaScript.",
-    techStack: ["Python", "Pandas", "JavaScript", "HTML", "CSS", "REST API"],
-    githubUrl: "https://github.com/roeisarid1/salary-calculator",
-    liveUrl: "", // Optional: Add live demo URL when available
+      "A workforce management platform designed for temporary event staff operations. Includes staff scheduling & assignment logic, real-time attendance tracking, task & incident management, centralized communication structure, and operational monitoring design.",
+    techStack: [
+      "Product Thinking",
+      "System Architecture",
+      "Process Modeling",
+      "Operational Logic",
+      "Scalability Vision",
+    ],
+    highlights: [
+      "Staff scheduling & assignment logic",
+      "Real-time attendance tracking",
+      "Task & incident management",
+      "Centralized communication structure",
+      "Operational monitoring design",
+    ],
+    demonstrates:
+      "Product thinking | System architecture planning | Process modeling | Operational logic | Scalability vision",
+    githubUrl: "",
+    liveUrl: "",
+    icon: "👥",
   },
   {
     id: 2,
-    title: "Meals Management Project",
+    title: "Salary Calculator",
+    subtitle: "Automated Salary & Timesheet Processing System",
     description:
-      "A full-stack Meals Management platform featuring user registration, authentication, and dynamic meal operations. The frontend delivers a clean, mobile-friendly interface, while an ASP.NET Core backend provides secure REST APIs, validation logic, and session-based workflows. The system is fully integrated with a relational SQL database, including structured data models, database services (DAL), and server-side data handling, demonstrating a real-world client–server architecture and strong JavaScript/C# integration.",
-    techStack: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "ASP.NET Core",
-      "C#",
-      "SQL Server",
+      "A backend-driven system that automates salary calculations based on working hours, overtime, bonuses, and deductions. Features Excel timesheet ingestion, data processing with Pandas, gross/net salary calculations, overtime logic implementation, and automated execution via API.",
+    techStack: ["Python", "FastAPI", "Pandas", "Excel", "Uvicorn", "REST API"],
+    highlights: [
+      "Excel timesheet ingestion",
+      "Data processing with Pandas",
+      "Gross/Net salary calculations",
+      "Overtime logic implementation",
+      "Automated execution (API + Cron)",
     ],
+    demonstrates:
+      "Data processing | Backend logic | Automation | Structured workflow design",
+    githubUrl: "https://github.com/roeisarid1/salary-calculator",
+    liveUrl: "",
+    icon: "📊",
+  },
+  {
+    id: 3,
+    title: "Operational Monitoring Dashboard",
+    subtitle: "Elastic Stack (Elasticsearch + Kibana)",
+    description:
+      "Designed and implemented internal operational dashboards for monitoring system health and performance. Includes real-time system metrics visualization, error & anomaly tracking, SLA monitoring panels, and log-based performance insights.",
+    techStack: [
+      "Elasticsearch",
+      "Kibana",
+      "Data Visualization",
+      "Log Analysis",
+      "KPI Monitoring",
+    ],
+    highlights: [
+      "Real-time system metrics visualization",
+      "Error & anomaly tracking",
+      "SLA monitoring panels",
+      "Log-based performance insights",
+    ],
+    demonstrates:
+      "Production monitoring | KPI definition | Log analysis | Data visualization | Operational impact",
+    githubUrl: "",
+    liveUrl: "",
+    icon: "📈",
+  },
+  {
+    id: 4,
+    title: "MealsProject",
+    subtitle: "Full-Stack Meal & Ingredient Management System",
+    description:
+      "A complete web-based system built with a relational database architecture and REST API communication. Features user authentication, relational DB modeling (Users ↔ Meals ↔ Ingredients), stored procedures & optimized queries, API-based backend, and dynamic frontend integration.",
+    techStack: [
+      "C#",
+      "ASP.NET Core",
+      "SQL Server",
+      "jQuery",
+      "REST API",
+      "HTML/CSS",
+    ],
+    highlights: [
+      "User authentication",
+      "Relational DB modeling (Users ↔ Meals ↔ Ingredients)",
+      "Stored procedures & optimized queries",
+      "API-based backend (ASP.NET Core)",
+      "Dynamic frontend integration (AJAX)",
+    ],
+    demonstrates:
+      "Full-stack architecture | Database design | API integration | Business logic implementation",
     githubUrl: "https://github.com/roeisarid1/MealsProject",
     liveUrl: "",
+    icon: "🍽️",
   },
 ];

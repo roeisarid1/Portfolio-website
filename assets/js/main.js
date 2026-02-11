@@ -142,6 +142,102 @@ function updateFooterYear() {
 
 document.addEventListener("DOMContentLoaded", updateFooterYear);
 
+// ===== LOAD PROJECTS DYNAMICALLY =====
+function loadProjects() {
+  const projectsContainer = document.getElementById("projects-container");
+
+  if (!projectsContainer || typeof projects === "undefined") return;
+
+  projects.forEach((project) => {
+    const projectCard = document.createElement("div");
+    projectCard.className = "project__card";
+
+    // Build highlights list
+    let highlightsList = "";
+    if (project.highlights && project.highlights.length > 0) {
+      highlightsList = `
+        <div class="project__highlights">
+          <h4 class="project__highlights-title">Key Features:</h4>
+          <ul class="project__highlights-list">
+            ${project.highlights.map((highlight) => `<li>${highlight}</li>`).join("")}
+          </ul>
+        </div>
+      `;
+    }
+
+    // Build tech stack
+    let techStack = "";
+    if (project.techStack && project.techStack.length > 0) {
+      techStack = `
+        <div class="project__tech">
+          ${project.techStack.map((tech) => `<span class="project__tech-tag">${tech}</span>`).join("")}
+        </div>
+      `;
+    }
+
+    // Build demonstrates section
+    let demonstrates = "";
+    if (project.demonstrates) {
+      demonstrates = `
+        <div class="project__demonstrates">
+          <strong>Demonstrates:</strong> ${project.demonstrates}
+        </div>
+      `;
+    }
+
+    // Build links
+    let links = "";
+    const hasGithub = project.githubUrl && project.githubUrl.trim() !== "";
+    const hasLive = project.liveUrl && project.liveUrl.trim() !== "";
+
+    if (hasGithub || hasLive) {
+      links = '<div class="project__links">';
+
+      if (hasGithub) {
+        links += `
+          <a href="${project.githubUrl}" class="project__link" target="_blank" rel="noopener noreferrer">
+            <span>View Code</span>
+          </a>
+        `;
+      }
+
+      if (hasLive) {
+        links += `
+          <a href="${project.liveUrl}" class="project__link project__link--secondary" target="_blank" rel="noopener noreferrer">
+            <span>Live Demo</span>
+          </a>
+        `;
+      }
+
+      links += "</div>";
+    }
+
+    projectCard.innerHTML = `
+      ${project.icon ? `<span class="project__icon">${project.icon}</span>` : ""}
+      <div class="project__header">
+        <h3 class="project__title">${project.title}</h3>
+        <p class="project__subtitle">${project.subtitle}</p>
+      </div>
+      <p class="project__description">${project.description}</p>
+      ${highlightsList}
+      ${techStack}
+      ${demonstrates}
+      ${links}
+    `;
+
+    projectsContainer.appendChild(projectCard);
+  });
+
+  // Add animation to project cards
+  const projectCards = document.querySelectorAll(".project__card");
+  projectCards.forEach((card) => {
+    card.classList.add("hidden");
+    observer.observe(card);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", loadProjects);
+
 // ===== SCROLL TO TOP FUNCTIONALITY (Optional Enhancement) =====
 function createScrollToTop() {
   const scrollBtn = document.createElement("button");
