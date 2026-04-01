@@ -1,194 +1,115 @@
-# Roei Sarid - Personal Portfolio Website
+# Roei Sarid — Personal Portfolio Website
 
 A modern, responsive personal portfolio website showcasing my skills, projects, and experience as an IT & Operations Analyst.
 
-## 🌟 Features
+**Live site:** [roeisarid1.github.io/Portfoliowebsite](https://roeisarid1.github.io/Portfoliowebsite)
 
-- **Responsive Design**: Fully responsive layout that works seamlessly on desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean, professional design with smooth animations and transitions
-- **Dynamic Projects**: Projects are dynamically generated from a data file for easy updates
-- **Smooth Scrolling**: Smooth navigation between sections with active link highlighting
-- **Interactive Elements**: Hover effects, scroll animations, and mobile-friendly hamburger menu
-- **Performance Optimized**: Debounced scroll events and efficient animations
+---
 
-## 📁 Project Structure
+## Features
+
+- Responsive layout (desktop, tablet, mobile)
+- Dynamic project cards rendered from `projects-data.js`
+- Scroll-reveal animations with Intersection Observer
+- Mobile hamburger navigation
+- Debounced scroll events for performance
+- Scroll-to-top button
+
+---
+
+## Project Structure
 
 ```
-portfolio-website/
-│
-├── index.html                      # Main HTML file with all sections
-├── README.md                       # Project documentation
+Portfolio website/
+├── index.html                  # All sections: hero, skills, projects, experience, contact
+├── README.md
 │
 ├── assets/
 │   ├── css/
-│   │   └── styles.css             # All styling (responsive, animations, etc.)
-│   │
+│   │   └── styles.css          # All styling — layout, animations, responsive breakpoints
 │   ├── js/
-│   │   ├── main.js                # Main JavaScript (navigation, animations, etc.)
-│   │   └── projects-data.js       # Projects data array
-│   │
-│   └── img/                       # Images and icons folder
-│       └── avatar-placeholder.jpg # Profile image (add your photo here)
+│   │   ├── main.js             # Navigation, scroll animations, project rendering
+│   │   └── projects-data.js    # Projects array — edit this to add/remove projects
+│   └── img/
+│       └── *.jpeg              # Profile photo
 │
 └── cv/
-    └── Roei_Sarid_CV.pdf          # Your CV file (add your CV here)
+    └── Roei_Sarid_CV.pdf       # Downloadable CV
 ```
 
-## 🚀 Getting Started
+---
 
-### Local Development
+## Projects
 
-1. **Clone or download** this repository to your local machine
+| Project | Tech | GitHub |
+|---|---|---|
+| **Teamgle** — Full-stack workforce management SaaS | ASP.NET Core 8, SQL Server, Firebase, Vanilla JS | [repo](https://github.com/roeisarid1/Teamgle) |
+| **Salary Calculator** — Automated payroll processing | Python, FastAPI, Pandas | [repo](https://github.com/roeisarid1/salary-calculator) |
+| **Operational Monitoring Dashboard** — ELK Stack | Elasticsearch, Kibana | internal |
+| **Fantasy Surf League** — WSL 2026 prediction app | Vanilla JS, localStorage, GitHub Pages | [repo](https://github.com/roeisarid1/surfing-fantasy-2026) |
 
-2. **Add your images**:
+---
 
-   - Place your profile photo in `assets/img/` as `avatar-placeholder.jpg`
-   - Recommended size: 300x300px or larger (square format)
+## Local Development
 
-3. **Add your CV**:
+```bash
+# Python
+python -m http.server 8000
 
-   - Create a `cv` folder in the root directory
-   - Place your CV as `Roei_Sarid_CV.pdf`
+# Node
+npx serve .
 
-4. **Update GitHub username**:
+# VS Code
+Right-click index.html → "Open with Live Server"
+```
 
-   - Open `index.html`
-   - Replace all instances of `USERNAME` with your actual GitHub username
-   - Also update in `assets/js/projects-data.js`
+Navigate to `http://localhost:8000`.
 
-5. **Open the website**:
+---
 
-   - Simply double-click `index.html` to open in your browser
-   - Or use a local server (recommended):
-
-     ```bash
-     # Using Python 3
-     python -m http.server 8000
-
-     # Using Node.js (http-server)
-     npx http-server
-
-     # Using VS Code Live Server extension
-     Right-click index.html → "Open with Live Server"
-     ```
-
-6. **View in browser**:
-   - Navigate to `http://localhost:8000` (or the port shown)
-
-## 🌐 Deploying to GitHub Pages
-
-1. **Create a GitHub repository**:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: Portfolio website"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/portfolio.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**:
-
-   - Go to your repository on GitHub
-   - Click **Settings** → **Pages**
-   - Under "Source", select **main** branch
-   - Click **Save**
-   - Your site will be published at: `https://YOUR-USERNAME.github.io/portfolio/`
-
-3. **Update links** (if needed):
-   - If your repository name is different from "portfolio", update any absolute paths
-
-## ✏️ Customization Guide
-
-### Adding/Editing Projects
+## Adding / Editing Projects
 
 Edit `assets/js/projects-data.js`:
 
 ```javascript
-export const projects = [
-  {
-    id: 1,
-    title: "Your Project Title",
-    description: "Brief description of your project...",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "https://github.com/username/repo",
-    liveUrl: "https://your-demo-url.com", // Optional
-  },
-  // Add more projects...
-];
-```
-
-### Changing Colors
-
-Edit CSS variables in `assets/css/styles.css`:
-
-```css
-:root {
-  --primary-color: #2563eb; /* Main accent color */
-  --secondary-color: #0ea5e9; /* Secondary accent */
-  --text-color: #1f2937; /* Main text color */
-  /* ... other variables ... */
+{
+  id: 5,
+  title: "Project Title",
+  subtitle: "Short descriptor",
+  description: "What it does and why it matters.",
+  techStack: ["Tech1", "Tech2"],
+  highlights: ["Feature 1", "Feature 2"],
+  demonstrates: "Skill A | Skill B | Skill C",
+  githubUrl: "https://github.com/roeisarid1/repo",
+  liveUrl: "",   // optional
+  icon: "🔧",
 }
 ```
 
-### Updating Content
+---
 
-All content is in `index.html`. Search for the section you want to edit:
+## Deploying to GitHub Pages
 
-- **Hero Section**: Update name, titles, and description
-- **About Section**: Modify your bio and background
-- **Skills Section**: Add/remove skills in each category
-- **Experience Section**: Update work history and education
-- **Contact Section**: Update contact information
+```bash
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
 
-### Adding New Sections
-
-1. Add HTML section in `index.html`
-2. Add corresponding styles in `assets/css/styles.css`
-3. Add navigation link in the header
-4. Update `main.js` if interactive features are needed
-
-## 🛠️ Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Flexbox, Grid, animations, custom properties
-- **JavaScript (ES6+)**: Modules, DOM manipulation, Intersection Observer
-- **Google Fonts**: Inter font family
-
-## 📱 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## 📝 To-Do / Future Enhancements
-
-- [ ] Add dark mode toggle
-- [ ] Add contact form with backend integration
-- [ ] Add blog section
-- [ ] Add project filtering by technology
-- [ ] Add testimonials section
-- [ ] Implement i18n (Hebrew/English)
-- [ ] Add loading animation
-- [ ] Optimize images with lazy loading
-
-## 📄 License
-
-This project is open source and available for personal use. Feel free to fork and customize for your own portfolio!
-
-## 📧 Contact
-
-**Roei Sarid**
-
-- Email: roies1738@gmail.com
-- LinkedIn: [linkedin.com/in/roeisarid](https://www.linkedin.com/in/roeisarid/)
-- GitHub: [github.com/USERNAME](https://github.com/USERNAME)
+Then: **Settings → Pages → Branch: main → / (root) → Save**
 
 ---
 
-**Built with ❤️ by Roei Sarid**
+## Skills Covered
 
-_Monitoring systems by day, building them by night._
+- **Front-End**: HTML, CSS, JavaScript
+- **Backend**: C#, ASP.NET Core, Python, FastAPI, REST API, SQL, NoSQL
+- **Systems & Tools**: Linux, Git, Grafana, Elastic/Kibana, Qlik, Oracle ERP, Excel, Jira
+- **AI & Developer Tools**: Claude Code, MCP Servers, AI-assisted Development, Prompt Engineering
+
+---
+
+## Contact
+
+**Roei Sarid** — roies1738@gmail.com
+[LinkedIn](https://www.linkedin.com/in/roeisarid/) · [GitHub](https://github.com/roeisarid1)
