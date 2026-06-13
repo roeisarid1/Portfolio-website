@@ -354,6 +354,7 @@ img {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: var(--mb-1-5);
 }
 
 .home__img {
