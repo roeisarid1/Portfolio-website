@@ -44,9 +44,9 @@ Portfolio website/
 | Project | Tech | GitHub |
 |---|---|---|
 | **Teamgle** — Full-stack workforce management SaaS | ASP.NET Core 8, SQL Server, Firebase, Vanilla JS | [repo](https://github.com/roeisarid1/Teamgle) |
-| **Salary Calculator** — Automated payroll processing | Python, FastAPI, Pandas | [repo](https://github.com/roeisarid1/salary-calculator) |
 | **Operational Monitoring Dashboard** — ELK Stack | Elasticsearch, Kibana | internal |
-| **Fantasy Surf League** — WSL 2026 prediction app | Vanilla JS, localStorage, GitHub Pages | [repo](https://github.com/roeisarid1/surfing-fantasy-2026) |
+| **Fantasy Surf League** — WSL 2026 prediction app with an automated results pipeline | Vanilla JS, Node.js, GitHub Actions, Firebase Firestore, GitHub Pages | [repo](https://github.com/roeisarid1/surfing-fantasy-2026) |
+| **Salary Calculator** — Automated payroll processing | Python, FastAPI, Pandas | [repo](https://github.com/roeisarid1/salary-calculator) |
 
 ---
 
