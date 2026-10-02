@@ -119,24 +119,4 @@ const projects = [
     liveUrl: "https://roeisarid1.github.io/surfing-fantasy-2026/",
     icon: "🏄",
   },
-  {
-    id: 5,
-    title: "Salary Calculator",
-    subtitle: "Automated Salary & Timesheet Processing System",
-    description:
-      "A backend-driven system that automates salary calculations based on working hours, overtime, bonuses, and deductions. Features Excel timesheet ingestion, data processing with Pandas, gross/net salary calculations, overtime logic implementation, and automated execution via API.",
-    techStack: ["Python", "FastAPI", "Pandas", "Excel", "Uvicorn", "REST API"],
-    highlights: [
-      "Excel timesheet ingestion",
-      "Data processing with Pandas",
-      "Gross/Net salary calculations",
-      "Overtime logic implementation",
-      "Automated execution (API + Cron)",
-    ],
-    demonstrates:
-      "Data processing | Backend logic | Automation | Structured workflow design",
-    githubUrl: "https://github.com/roeisarid1/salary-calculator",
-    liveUrl: "",
-    icon: "📊",
-  },
 ];
