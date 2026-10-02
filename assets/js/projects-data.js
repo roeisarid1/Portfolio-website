@@ -66,31 +66,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "Operational Monitoring Dashboard",
-    subtitle: "Elastic Stack (Elasticsearch + Kibana)",
-    description:
-      "Designed and implemented internal operational dashboards for monitoring system health and performance. Includes real-time system metrics visualization, error & anomaly tracking, SLA monitoring panels, and log-based performance insights.",
-    techStack: [
-      "Elasticsearch",
-      "Kibana",
-      "Data Visualization",
-      "Log Analysis",
-      "KPI Monitoring",
-    ],
-    highlights: [
-      "Real-time system metrics visualization",
-      "Error & anomaly tracking",
-      "SLA monitoring panels",
-      "Log-based performance insights",
-    ],
-    demonstrates:
-      "Production monitoring | KPI definition | Log analysis | Data visualization | Operational impact",
-    githubUrl: "",
-    liveUrl: "",
-    icon: "📈",
-  },
-  {
-    id: 4,
     title: "Fantasy Surf League",
     subtitle: "WSL 2026 Season Prediction App",
     description:
