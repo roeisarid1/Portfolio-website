@@ -32,6 +32,40 @@ const projects = [
   },
   {
     id: 2,
+    title: "Market & Supply Chain AI Monitor",
+    subtitle: "Multi-tenant SaaS — nightly AI pipeline + bilingual dashboard, live",
+    description:
+      "A production SaaS that produces a daily AI-generated snapshot of twelve market sectors and the supply-chain risks inside them. A Python pipeline runs nightly on GitHub Actions, gathers prices and news per sector, and sends derived metrics to Claude under a forced tool-use schema. A Next.js dashboard reads what the pipeline wrote — fully in Hebrew or English — and never calls a model to render a page.",
+    techStack: [
+      "Python 3.11",
+      "Claude API",
+      "Next.js 16",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "Row-Level Security",
+      "Tailwind CSS",
+      "ECharts",
+      "GitHub Actions",
+      "Vercel",
+    ],
+    highlights: [
+      "Nightly pipeline analysing 12 sectors, with per-sector failure isolation",
+      "Structured AI output only: forced tool-use schema, validated before every write",
+      "Monthly figures computed arithmetically — the model writes prose, never numbers",
+      "Full Hebrew/English UI including the AI analysis, via a fail-soft translation step",
+      "Row-Level Security on every table; the web app never holds the service key",
+      "On-demand deep analysis behind a quota enforced atomically inside Postgres",
+      "425 automated tests, a --health pre-flight command, and CI failure alerting",
+    ],
+    demonstrates:
+      "AI integration | Data pipeline design | Full-stack TypeScript | PostgreSQL & RLS | CI/CD automation | i18n & RTL",
+    githubUrl: "https://github.com/roeisarid1/Stock_Market_Project",
+    liveUrl: "https://stock-market-project-nine.vercel.app",
+    icon: "📡",
+  },
+  {
+    id: 3,
     title: "Operational Monitoring Dashboard",
     subtitle: "Elastic Stack (Elasticsearch + Kibana)",
     description:
@@ -56,7 +90,7 @@ const projects = [
     icon: "📈",
   },
   {
-    id: 3,
+    id: 4,
     title: "Fantasy Surf League",
     subtitle: "WSL 2026 Season Prediction App",
     description:
@@ -86,7 +120,7 @@ const projects = [
     icon: "🏄",
   },
   {
-    id: 4,
+    id: 5,
     title: "Salary Calculator",
     subtitle: "Automated Salary & Timesheet Processing System",
     description:
